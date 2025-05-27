@@ -1,4 +1,4 @@
-# RoamCast
+# 🌦️RoamCast
 
 **RoamCast** is a React-based web application using modern APIs to transform trip planning into a streamlined experience, combining accurate weather forecasts with AI-driven packing suggestions for travel-ready insights at a glance. Users enter destinations and travel dates; RoamCast then retrieves and summarizes weather data to assist with packing and preparation.
 
@@ -28,15 +28,15 @@
 
 ## App Flow 
 
-User Input (City & Date)
-    ↓
-LangChain Orchestration
-    ↓
-1. Geocode via OpenWeatherMap
-2. Fetch Forecast via WeatherAPI
-3. Generate Summary via OpenAI
-    ↓
-Display Forecast & Recommendations in UI Cards
+    User Input (City & Date)    
+            ↓    
+    LangChain Orchestration    
+            ↓    
+    1. Geocode via OpenWeatherMap    
+    2. Fetch Forecast via WeatherAPI    
+    3. Generate Summary via OpenAI    
+            ↓    
+    Display Forecast & Recommendations in UI Cards    
 
 ## Required API Keys Overview
 
@@ -51,8 +51,8 @@ Display Forecast & Recommendations in UI Cards
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/<USERNAME>/roamcast.git
-   cd roamcast
+   git clone https://github.com/SoumyaGanesh12/RoamCast.git
+   cd RoamCast
    ```
 2. Install dependencies:
 
@@ -73,4 +73,4 @@ Display Forecast & Recommendations in UI Cards
    ```
 5. Access the application by opening `http://localhost:5173` in a browser.
 
-This project offers a practical demonstration of integrating modern APIs and AI for enhanced trip planning.
+This project focuses on demonstrating the integration of modern APIs and AI for enhanced trip planning experience.
