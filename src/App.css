@@ -1,0 +1,192 @@
+:root {
+  --clr-primary: #1e3a8a;
+  --clr-bg: #bbc9e0;
+  --clr-surface: #ffffff;
+  --clr-text: #1f2937;
+  --shadow: 0 4px 16px rgba(0,0,0,0.06);
+}
+
+/* RESET */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: var(--clr-bg);
+  color: var(--clr-text);
+}
+
+/* APP WRAPPER */
+.app-root {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* HERO */
+.hero-banner {
+  background: var(--clr-surface);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  text-align: center;
+  padding: 1.2rem;
+}
+.hero-banner h1 {
+  color: var(--clr-primary);
+  font-size: 2.5rem;
+}
+.hero-banner p {
+  margin-top: 0.5rem;
+  color: #475569;
+}
+
+/* FORM SECTION */
+.trip-form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* FETCH BUTTON */
+.button-row {
+  display: flex;
+  justify-content: center;
+  margin: 0.15rem 0;
+}
+
+.btn-primary {
+  background: var(--clr-primary);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.btn-primary:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+.btn-primary:hover:not(:disabled) {
+  background: #1b3aac;
+}
+
+/* GRID: wrap into rows of up to 4 */
+.stops-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* CARD (INPUT & FORECAST SHARE THIS) */
+.stop-card {
+  background: var(--clr-surface);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  padding: 1rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-height: 400px; /* fixed height so all cards match */
+}
+
+/* REMOVE ICON */
+.btn-remove {
+  position: absolute;
+  top: 1.35rem;
+  right: 1.75rem;
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  color: #dc2626;
+  cursor: pointer;
+}
+.btn-remove:hover {
+  color: #b91c1c;
+}
+
+/* CARD HEADER (DESTINATION OR DATE) */
+.card-header {
+  background: var(--clr-primary);
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  padding: 0.5rem 0;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+/* INPUT MODE */
+.stop-card label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+.stop-card input {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+}
+
+/* ADD-STOP CARD */
+.add-stop-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--clr-primary);
+  font-weight: 600;
+  border: 2px dashed var(--clr-primary);
+  border-radius: 12px;
+  cursor: pointer;
+  padding: 1rem;
+}
+.add-stop-card:hover {
+  background: rgba(30,58,138,0.05);
+}
+
+/* FORECAST MODE */
+.card-city {
+  text-align: center;
+  font-weight: 600;
+}
+.card-icon {
+  display: block;
+  width: 48px;
+  height: 48px;
+  margin: 0.5rem auto;
+}
+.card-temp {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.card-range {
+  text-align: center;
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+}
+.card-summary {
+  text-align: center;
+  font-style: italic;
+  color: #475569;
+}
+
+/* FOOTER */
+.app-footer {
+  text-align: center;
+  color: #374252;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 1rem;
+  font-size: 0.9rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .hero-banner h1 { font-size: 2rem; }
+  .stops-grid {
+    grid-template-columns: 1fr;
+  }
+}
